@@ -213,15 +213,15 @@
         }
         /* ── DESCRIÇÃO RECOLHÍVEL ── */
         .project-desc-preview {
-            font-size: 1.1rem;
+            font-size: 1 rem;
             color: #2a08d1;
-            line-height: 1.8;
+            line-height: 1.5;
             margin-bottom: 0;
         }
         .project-desc-extra {
-            font-size: 1.05rem;
+            font-size: 1 rem;
             color: #2a08d1;
-            line-height: 1.8;
+            line-height: 1.5;
             margin-top: 14px;
             overflow: hidden;
             max-height: 0;
@@ -237,19 +237,26 @@
         .expand-btn {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            margin-top: 14px;
-            background: none;
-            border: none;
+            gap: 2px;
+            margin-top: 10px;
+            background: white;
+            border: 2px solid #0284c7;
             cursor: pointer;
             color: #0284c7;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
             font-family: 'Inter', sans-serif;
-            padding: 6px 0;
-            transition: color 0.2s ease;
+            padding: 8px 20px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .expand-btn:hover { color: #0ea5e9; }
+        .expand-btn:hover { 
+            background: #0284c7;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.3);
+        }
         .expand-btn .arrow {
             display: inline-block;
             font-size: 1.1rem;
@@ -394,13 +401,95 @@
 				</br></br>
 				<strong>Resultados esperados:</strong> Espera-se produzir uma ferramenta que amplie a transparência sobre a atuação dos senadores, permitindo identificar padrões de participação, gastos e temas de interesse. 
 				O trabalho também pretende contribuir academicamente ao demonstrar o uso de visualização de dados e análise textual no contexto legislativo.</p>
-                            <button class="expand-btn" onclick="toggleExtra(this, 'extra1')">
+                <button class="expand-btn" onclick="toggleExtra(this, 'extra1')">
                 Ver mais <span class="arrow">&#8964;</span>
-            </button>
+                </button>
 				<div class="tech-tags">
                     <span class="tag">Json</span>
                     <span class="tag">Streamlit</span>
                     <span class="tag">Dashboard</span>
+                </div>
+            </div>
+        </section>
+
+          <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="ICFlowIdea.png" alt="tcc 1"></div>
+                    <div class="image-slide"><img src="ICFlowTela.png" alt="tcc 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(3)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(3)">›</button>
+                </div>
+                <div class="image-count" id="count3">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-tcc">TCC</span>
+                    <span class="status-label status-disponivel">Disponível</span>
+                </div>
+                <h2 class="project-title"> ICFlow - Plataforma de Gestão Física do Instituto de Computação</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver uma plataforma web para otimização da gestão 
+				de laboratórios de informática, integrando controle de ativos, sistema de objetos achados/perdidos e mapeamento espacial em tempo real.
+				</p>
+				<p class="project-desc-extra" id="extra3">Funcionalidades Principais:
+                Gestão de Equipamentos: Inventário completo com histórico de manutenção, status de funcionamento e agendamento de uso Objetos Achados/Perdidos: Cadastro georreferenciado, notificações automáticas e sistema de reivindicação
+				Mapeamento 3D/2D: Localização precisa via planta baixa interativa, QR Codes e beacons IoT.
+				</br></br>
+				Tecnologias Propostas:
+				Frontend: React.js + Three.js (mapas 3D)
+				Backend: Node.js + Express + Socket.io (real-time)
+				Banco: PostgreSQL + PostGIS (geolocalização)
+				Mapeamento: Leaflet.js + Floorplan SVG
+				</br></br>
+				Impacto Acadêmico/Tecnológico: Redução no tempo de manutenção da infraestrutura do IC, aumento na taxa de recuperação de objetos perdidos e otimização no uso de recursos laboratoriais.</p>
+                            <button class="expand-btn" onclick="toggleExtra(this, 'extra3')">
+                Ver mais <span class="arrow">&#8964;</span>
+            </button>
+				<div class="tech-tags">
+                    <span class="tag"> Node.js</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Floorplan SVG</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="MatriculaVis2.png" ></div>
+                    <div class="image-slide"><img src="MatriculaVis1.png" ></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(6)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(6)">›</button>
+                </div>
+                <div class="image-count" id="count6">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-it">Iniciação Tecnológica</span>
+                    <span class="status-label status-em-andamento">Em andamento</span>
+                </div>
+                <h2 class="project-title">GPS Acadêmico: Mapa Visual e Interativo para Planejamento Acadêmico do Estudante</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong>
+                    desenvolver uma ferramenta visual e interativa baseada em grafos para auxiliar estudantes no planejamento acadêmico e na organização da matrícula, considerando pré-requisitos, fluxo curricular, departamentos, cursos, turnos, horários e campus. Essa ferramenta deve permitir ao usuário ter acesso e filtrar informações de seu curso (disciplinas obrigatórias, optativas e livres), assim como cursos correlatos. É desejável que a ferramenta notifique possíveis incompatibilidade de horários, pré-requisitos, ou mudança de campus.
+                <p class="project-desc-extra" id="extra6"><strong>Problema de pesquisa:</strong> A ausência de uma visualização integrada com as inúmeras variáveis de matriz curricular e de geolocalização reduz a eficiência do planejamento acadêmico e aumenta a insegurança do estudante diante das decisões de realização de matrícula em todos os períodos acadêmicos.
+				</br></br>
+				<strong>Metodologia proposta:</strong> 
+				A metodologia envolve coleta e organização de dados curriculares, modelagem das relações entre disciplinas em grafos, apoio ao desenvolvimento de uma aplicação visual interativa com filtros e buscas, além de documentação contínua. Também inclui testes com usuários, avaliação da ferramenta, consolidação de feedbacks e produção de relatórios e materiais de divulgação do projeto.
+				</br></br>
+				<strong>Resultados esperados:</strong>
+				A solução tem aplicação direta no ensino superior, auxiliando estudantes no planejamento da matrícula,  na compreensão de pré-requisitos, na organização por semestre e na visualização de trajetórias  curriculares. Também pode apoiar coordenadores, docentes e setores acadêmicos na orientação discente e na análise da estrutura curricular. Institucionalmente, contribui para permanência estudantil, redução de retenção e maior transparência das informações acadêmicas.
+				</p>
+				<button class="expand-btn" onclick="toggleExtra(this, 'extra6')">
+                Ver mais <span class="arrow">&#8964;</span>
+				</button>
+				<div class="tech-tags">
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Plotly</span>
                 </div>
             </div>
         </section>
@@ -434,7 +523,7 @@
 				</p>
 				<button class="expand-btn" onclick="toggleExtra(this, 'extra2')">
                 Ver mais <span class="arrow">&#8964;</span>
-            </button>
+                </button>
                 <div class="tech-tags">
                     <span class="tag">Tableau</span>
                     <span class="tag">Json</span>
@@ -443,48 +532,7 @@
             </div>
         </section>
 
-        <section class="project-row">
-            <div class="carousel-container">
-                <div class="project-images">
-                    <div class="image-slide active"><img src="ICFlowIdea.png" alt="tcc 1"></div>
-                    <div class="image-slide"><img src="ICFlowTela.png" alt="tcc 2"></div>
-                </div>
-                <div class="carousel-nav">
-                    <button class="nav-btn" onclick="prevImage(3)">‹</button>
-                    <button class="nav-btn" onclick="nextImage(3)">›</button>
-                </div>
-                <div class="image-count" id="count3">1/2</div>
-            </div>
-            <div class="project-info">
-                <div class="labels-container">
-                    <span class="category-label category-tcc">TCC</span>
-                    <span class="status-label status-disponivel">Disponível</span>
-                </div>
-                <h2 class="project-title"> ICFlow - Plataforma de Gestão Física do Instituto de Computação</h2>
-                <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolvimento de plataforma web para otimização da gestão 
-				de laboratórios de informática, integrando controle de ativos, sistema de objetos achados/perdidos e mapeamento espacial em tempo real.
-				</p>
-				<p class="project-desc-extra" id="extra3">Funcionalidades Principais:
-                Gestão de Equipamentos: Inventário completo com histórico de manutenção, status de funcionamento e agendamento de uso Objetos Achados/Perdidos: Cadastro georreferenciado, notificações automáticas e sistema de reivindicação
-				Mapeamento 3D/2D: Localização precisa via planta baixa interativa, QR Codes e beacons IoT.
-				</br></br>
-				Tecnologias Propostas:
-				Frontend: React.js + Three.js (mapas 3D)
-				Backend: Node.js + Express + Socket.io (real-time)
-				Banco: PostgreSQL + PostGIS (geolocalização)
-				Mapeamento: Leaflet.js + Floorplan SVG
-				</br></br>
-				Impacto Acadêmico/Tecnológico: Redução no tempo de manutenção da infraestrutura do IC, aumento na taxa de recuperação de objetos perdidos e otimização no uso de recursos laboratoriais.</p>
-                            <button class="expand-btn" onclick="toggleExtra(this, 'extra3')">
-                Ver mais <span class="arrow">&#8964;</span>
-            </button>
-				<div class="tech-tags">
-                    <span class="tag"> Node.js</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Floorplan SVG</span>
-                </div>
-            </div>
-        </section>
+      
 
         <section class="project-row">
             <div class="carousel-container">
@@ -496,11 +544,11 @@
                     <button class="nav-btn" onclick="prevImage(4)">‹</button>
                     <button class="nav-btn" onclick="nextImage(4)">›</button>
                 </div>
-                <div class="image-count" id="count3">1/2</div>
+                <div class="image-count" id="count4">1/2</div>
             </div>
             <div class="project-info">
                 <div class="labels-container">
-                    <span class="category-label category-extensao">Extensão</span>
+                    <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-disponivel">Disponível</span>
                 </div>
                 <h2 class="project-title">ConectaIC</h2>
@@ -514,8 +562,9 @@
 				Espera-se ampliar o conhecimento da comunidade externa sobre a importância da universidade pública, fortalecendo sua imagem institucional. Pretende-se que os visitantes compreendam melhor o impacto do ensino, da pesquisa e da extensão, sintam-se acolhidos no ambiente universitário e desenvolvam maior confiança na capacidade técnica e no compromisso social dos profissionais que atuam na instituição.
 				</br></br>
 				</p>
-				          <button class="expand-btn" onclick="toggleExtra(this, 'extra4')">
+				<button class="expand-btn" onclick="toggleExtra(this, 'extra4')">
                 Ver mais <span class="arrow">&#8964;</span>
+                </button>
 				<div class="tech-tags">
                     <span class="tag">Streamlit</span>
                     <span class="tag">Python</span>
@@ -527,33 +576,35 @@
        <section class="project-row">
             <div class="carousel-container">
                 <div class="project-images">
-                    <div class="image-slide active"><img src=".png" alt="Dout 1"></div>
-                    <div class="image-slide"><img src="https://via.placeholder.com/480x320/6B7280/fff?text=Dout+2" alt="Dout 2"></div>
+                    <div class="image-slide active"><img src="LLMsGraphs2.png" alt="TCC3"></div>
+                    <div class="image-slide"><img src="LLMsGraphs1.png" alt="TCC 4"></div>
                 </div>
                 <div class="carousel-nav">
                     <button class="nav-btn" onclick="prevImage(5)">‹</button>
                     <button class="nav-btn" onclick="nextImage(5)">›</button>
                 </div>
-                <div class="image-count" id="count3">1/2</div>
+                <div class="image-count" id="count5">1/2</div>
             </div>
             <div class="project-info">
                 <div class="labels-container">
-                    <span class="category-label category-extensao">Extensão</span>
+                    <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-disponivel">Disponível</span>
                 </div>
-                <h2 class="project-title">ConectaIC</h2>
-                <p class="project-desc-preview"><strong>Objetivo:</strong> </p>
-                <p class="project-desc-extra" id="extra5"><strong>Justificativa:</strong> 
+                <h2 class="project-title">Do Prompt ao Gráfico: Qual LLM Entende Melhor Visualização de Dados?</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong>
+                Investigar como diferentes modelos de linguagem de grande porte, como ChatGPT, Gemini e DeepSeek, atuam na construção do pipeline de visualização de dados a partir de prompts em linguagem natural. <!--O trabalho busca analisar a capacidade desses modelos de definir dados relevantes, sugerir pré-processamentos, propor mapeamentos visuais, selecionar gráficos e interações adequadas para a construção de metáforas visuais coerentes com os objetivos analíticos.--></p>
+                <p class="project-desc-extra" id="extra5"><strong>Problema de pesquisa:</strong> Embora LLMs tenham demonstrado potencial em tarefas de apoio à análise de dados, ainda não está claro como esses modelos se comportam ao longo das diferentes etapas do pipeline de visualização. <!--Nesse contexto, questiona-se em que medida diferentes LLMs conseguem interpretar prompts para gerar decisões adequadas sobre seleção e transformação de dados, definição de representações visuais, bem como em quais etapas apresentam maior ou menor eficácia.-->
 				</br></br>
 				<strong>Metodologia proposta:</strong> 
-				
+				A pesquisa terá caráter aplicado, comparativo e exploratório. 
+                A partir de cenários previamente definidos, será elaborado o mesmo prompt para cada etapa do processo de visualização, desde a definição dos dados relevantes até a proposição de visualizações. As respostas serão analisadas segundo critérios quantitativos e qualitativos, buscando identificar padrões de desempenho e diferenças entre os modelos avaliados. A comparação permitirá observar diferenças de desempenho entre os modelos em cada etapa do pipeline, destacando pontos fortes e limitações de cada um.
 				</br></br>
 				<strong>Resultados esperados:</strong>
-				
-				</br></br>
+				Espera-se identificar padrões comparativos entre os modelos avaliados, destacando quais LLMs demonstram maior eficácia em etapas específicas do processo de visualização de dados.<!-- Pretende-se compreender melhor as potencialidades e limitações desses sistemas na tradução de prompts em soluções visuais consistentes, contribuindo para discussões sobre o uso de IA generativa em visualização de dados. Como resultado, o trabalho poderá oferecer subsídios para o desenvolvimento de ferramentas inteligentes de apoio à criação de visualizações mais acessíveis, eficientes e contextualizadas.-->
 				</p>
-				          <button class="expand-btn" onclick="toggleExtra(this, 'extra5')">
+				<button class="expand-btn" onclick="toggleExtra(this, 'extra5')">
                 Ver mais <span class="arrow">&#8964;</span>
+                </button>
 				<div class="tech-tags">
                     <span class="tag">Streamlit</span>
                     <span class="tag">Python</span>
@@ -561,10 +612,12 @@
                 </div>
             </div>
         </section>
+
+     
     </div>
 
     <script>
-        let currentImages = [0, 0, 0, 0, 0];
+        let currentImages = [0, 0, 0, 0, 0, 0, 0];
 
         function nextImage(projectIndex) {
             const slides = document.querySelectorAll(`.project-row:nth-child(${projectIndex + 1}) .image-slide`);
