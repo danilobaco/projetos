@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Acadêmicos | Programação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #dbeafe;
+            /* Novo background contendo diversos tipos de gráficos focados em Data Viz (Treemap, Bolhas, Word Cloud, Barras, Radar, Coroplético, Linhas, Grafos e Scatter) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E %3Crect width='1920' height='1080' fill='%23dbeafe'/%3E %3Cpath d='M 0 100 L 1920 100 M 0 300 L 1920 300 M 0 500 L 1920 500 M 0 700 L 1920 700 M 0 900 L 1920 900' stroke='%23bfdbfe' stroke-width='0.5' opacity='0.5'/%3E %3Cpath d='M 200 0 L 200 1080 M 600 0 L 600 1080 M 1000 0 L 1000 1080 M 1400 0 L 1400 1080 M 1800 0 L 1800 1080' stroke='%23bfdbfe' stroke-width='0.5' opacity='0.5'/%3E %3C!-- Treemap --%3E %3Crect x='100' y='50' width='250' height='150' fill='none' stroke='%2360a5fa' stroke-width='2' opacity='0.4'/%3E %3Crect x='100' y='50' width='150' height='100' fill='%2393c5fd' stroke='%23dbeafe' stroke-width='2' opacity='0.3'/%3E %3Crect x='250' y='50' width='100' height='150' fill='%2360a5fa' stroke='%23dbeafe' stroke-width='2' opacity='0.2'/%3E %3Crect x='100' y='150' width='80' height='50' fill='%233b82f6' stroke='%23dbeafe' stroke-width='2' opacity='0.15'/%3E %3Crect x='180' y='150' width='70' height='50' fill='%2393c5fd' stroke='%23dbeafe' stroke-width='2' opacity='0.4'/%3E %3C!-- Bubble Chart --%3E %3Ccircle cx='200' cy='320' r='40' fill='%2360a5fa' opacity='0.25'/%3E %3Ccircle cx='300' cy='280' r='60' fill='%2393c5fd' opacity='0.35'/%3E %3Ccircle cx='250' cy='400' r='30' fill='%233b82f6' opacity='0.15'/%3E %3Ccircle cx='350' cy='380' r='45' fill='%2393c5fd' opacity='0.25'/%3E %3Ccircle cx='120' cy='370' r='20' fill='%2360a5fa' opacity='0.35'/%3E %3C!-- Word Cloud --%3E %3Ctext x='100' y='550' font-size='48' font-family='sans-serif' font-weight='bold' fill='%2360a5fa' opacity='0.25'%3EDATA%3C/text%3E %3Ctext x='250' y='520' font-size='24' font-family='sans-serif' fill='%233b82f6' opacity='0.35'%3EViz%3C/text%3E %3Ctext x='80' y='610' font-size='36' font-family='sans-serif' font-weight='bold' fill='%2393c5fd' opacity='0.25'%3EANALYSIS%3C/text%3E %3Ctext x='280' y='580' font-size='28' font-family='sans-serif' fill='%2360a5fa' opacity='0.25'%3ECharts%3C/text%3E %3Ctext x='180' y='660' font-size='42' font-family='sans-serif' font-weight='bold' fill='%233b82f6' opacity='0.15'%3EXAI%3C/text%3E %3C!-- Bar Chart --%3E %3Cpath d='M 100 800 L 100 1000 L 350 1000' fill='none' stroke='%2360a5fa' stroke-width='3' opacity='0.4'/%3E %3Crect x='120' y='900' width='30' height='100' fill='%2393c5fd' opacity='0.4'/%3E %3Crect x='170' y='830' width='30' height='170' fill='%2360a5fa' opacity='0.3'/%3E %3Crect x='220' y='950' width='30' height='50' fill='%233b82f6' opacity='0.2'/%3E %3Crect x='270' y='780' width='30' height='220' fill='%2393c5fd' opacity='0.5'/%3E %3Crect x='320' y='870' width='30' height='130' fill='%2360a5fa' opacity='0.3'/%3E %3C!-- Radar Chart --%3E %3Cpolygon points='960,50 1046,100 1046,200 960,250 874,200 874,100' fill='none' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cpolygon points='960,100 1003,125 1003,175 960,200 917,175 917,125' fill='none' stroke='%2360a5fa' stroke-width='2' opacity='0.2'/%3E %3Cline x1='960' y1='150' x2='960' y2='50' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cline x1='960' y1='150' x2='1046' y2='100' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cline x1='960' y1='150' x2='1046' y2='200' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cline x1='960' y1='150' x2='960' y2='250' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cline x1='960' y1='150' x2='874' y2='200' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cline x1='960' y1='150' x2='874' y2='100' stroke='%2393c5fd' stroke-width='1' opacity='0.4'/%3E %3Cpolygon points='960,80 1020,110 1000,190 960,220 890,180 910,110' fill='%233b82f6' opacity='0.15'/%3E %3C!-- Choropleth Map --%3E %3Cpolygon points='800,850 850,800 900,820 880,900 820,950' fill='%233b82f6' opacity='0.25' stroke='%23dbeafe' stroke-width='2'/%3E %3Cpolygon points='900,820 980,810 1020,860 950,910 880,900' fill='%2393c5fd' opacity='0.35' stroke='%23dbeafe' stroke-width='2'/%3E %3Cpolygon points='880,900 950,910 930,980 850,990 820,950' fill='%2360a5fa' opacity='0.15' stroke='%23dbeafe' stroke-width='2'/%3E %3Cpolygon points='950,910 1020,860 1060,930 990,980 930,980' fill='%233b82f6' opacity='0.1' stroke='%23dbeafe' stroke-width='2'/%3E %3C!-- Line Chart --%3E %3Cpath d='M 1450,100 L 1450,300 L 1800,300' fill='none' stroke='%2360a5fa' stroke-width='3' opacity='0.4'/%3E %3Cpath d='M 1450,280 L 1500,180 L 1550,250 L 1620,120 L 1690,190 L 1760,80' fill='none' stroke='%233b82f6' stroke-width='4' opacity='0.3'/%3E %3Ccircle cx='1450' cy='280' r='5' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1500' cy='180' r='5' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1550' cy='250' r='5' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1620' cy='120' r='5' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1690' cy='190' r='5' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1760' cy='80' r='5' fill='%233b82f6' opacity='0.4'/%3E %3C!-- Network Graph --%3E %3Cline x1='1550' y1='450' x2='1650' y2='420' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cline x1='1650' y1='420' x2='1750' y2='480' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cline x1='1650' y1='420' x2='1620' y2='550' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cline x1='1620' y1='550' x2='1720' y2='570' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cline x1='1750' y1='480' x2='1720' y2='570' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Cline x1='1550' y1='450' x2='1620' y2='550' stroke='%2360a5fa' stroke-width='2' opacity='0.3'/%3E %3Ccircle cx='1550' cy='450' r='10' fill='%2393c5fd' opacity='0.5'/%3E %3Ccircle cx='1650' cy='420' r='15' fill='%233b82f6' opacity='0.4'/%3E %3Ccircle cx='1750' cy='480' r='12' fill='%2393c5fd' opacity='0.5'/%3E %3Ccircle cx='1620' cy='550' r='18' fill='%2360a5fa' opacity='0.4'/%3E %3Ccircle cx='1720' cy='570' r='10' fill='%2393c5fd' opacity='0.5'/%3E %3C!-- Scatter Plot --%3E %3Cpath d='M 1450,750 L 1450,950 L 1800,950' fill='none' stroke='%2360a5fa' stroke-width='3' opacity='0.4'/%3E %3Ccircle cx='1500' cy='900' r='4' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1530' cy='870' r='5' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1560' cy='820' r='3' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1580' cy='920' r='6' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1620' cy='860' r='4' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1650' cy='810' r='5' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1680' cy='880' r='4' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1720' cy='780' r='6' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1750' cy='830' r='5' fill='%233b82f6' opacity='0.5'/%3E %3Ccircle cx='1780' cy='790' r='4' fill='%233b82f6' opacity='0.5'/%3E %3C/svg%3E");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            padding: 80px 40px 40px;
+        }
+		/* ── TÍTULO ── */
+       h1 { 
+    text-align: center; 
+    font-size: clamp(2.8rem, 7vw, 5rem); 
+    font-weight: 800; 
+    margin-bottom: 100px;
+    color: #fff;
+    text-shadow:
+        0 0 20px rgba(0, 170, 255, 0.8),
+        0 0 40px rgba(0, 170, 255, 0.5),
+        0 4px 16px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #0ea5e9 100%);
+    border-radius: 24px;
+    box-shadow:
+        0 8px 40px rgba(2, 132, 199, 0.4),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/* ── LISTA DE PROJETOS ── */
+        .projects-list {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .project-row {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: flex-start;
+            padding: 40px;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 28px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,170,255,0.15);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .project-row::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #00aaff, #0284c7);
+            box-shadow: 0 0 20px rgba(0,170,255,0.4);
+        }
+        .project-row:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 35px 100px rgba(0,170,255,0.15);
+            border-color: rgba(0,170,255,0.3);
+        }
+		/* ── CARROSSEL ── */
+        .carousel-container {
+            flex: 0 0 480px;
+            position: relative;
+        }
+        .project-images {
+            position: relative;
+            height: 320px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .image-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .image-slide.active {
+            opacity: 1;
+        }
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 20px;
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 12px;
+        }
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            color: #374151;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .nav-btn:hover {
+            background: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .image-count {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .project-info {
+            flex: 1;
+            padding: 20px 0;
+        }
+        .labels-container {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .category-label {
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .category-tcc { background: linear-gradient(135deg, #6E0DB8, #6E0DB8); color: white; }
+        .category-mestrado { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; }
+        .category-doutorado { background: linear-gradient(135deg, #6b7280, #4b5563); color: white; }
+        .category-ic { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .category-it { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; }
+		.category-extensao { background: linear-gradient(135deg, #eb704b, #eb704b); color: white; }
+        .status-label {
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        .status-em-andamento { 
+            background: linear-gradient(135deg, #B33226, #B33226); 
+            color: white; 
+        }
+        .status-disponivel { 
+            background: linear-gradient(135deg, #05D669, #05D669); 
+            color: white; 
+        }
+        .category-label:hover, .status-label:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+        }
+        .project-title {
+            font-size: 2.0rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .project-title::before {
+            content: '💻';
+            font-size: 1.3rem;
+        }
+        /* ── DESCRIÇÃO RECOLHÍVEL ── */
+        .project-desc-preview {
+            font-size: 1.1rem;
+            color: #2a08d1;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        .project-desc-extra {
+            font-size: 1.05rem;
+            color: #2a08d1;
+            line-height: 1.8;
+            margin-top: 14px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+        .project-desc-extra.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+		/* ── BOTÃO VER MAIS ── */
+        .expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #0284c7;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            padding: 6px 0;
+            transition: color 0.2s ease;
+        }
+        .expand-btn:hover { color: #0ea5e9; }
+        .expand-btn .arrow {
+            display: inline-block;
+            font-size: 1.1rem;
+            transition: transform 0.35s ease;
+        }
+        .expand-btn.open .arrow { transform: rotate(180deg); }
+		
+		 /* ── TAGS ── */
+         .tech-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .tag {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            color: #0369a1;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(0,170,255,0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .tag:hover {
+            background: linear-gradient(135deg, #00aaff, #0284c7);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,170,255,0.4);
+        }
+          @media (max-width: 1024px) {
+            .project-row { flex-direction: column; gap: 32px; text-align: center; }
+            .carousel-container { flex: none; max-width: 500px; margin: 0 auto; }
+            .labels-container { justify-content: center; }
+            .expand-btn { margin: 14px auto 0; display: flex; }
+        }
+        @media (max-width: 768px) {
+            body { padding: 60px 20px 20px; }
+            .project-row { padding: 28px 20px; margin-bottom: 28px; }
+            .project-images { height: 240px; }
+            .project-title { font-size: 1.6rem; }
+            .labels-container { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    Projetos Acadêmicos
+    <br>
+    <span style="font-weight: 300; font-size: 0.4em; letter-spacing: 12px; opacity: 0.85; text-shadow: none;">Prof. Danilo Coimbra - UFBA</span>
+</h1>
+    <div class="projects-list">
+        <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="XAIIdeia.png" alt="Calc 1"></div>
+                    <div class="image-slide"><img src="XAITela.png" alt="Calc 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(0)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(0)">›</button>
+                </div>
+                <div class="image-count" id="count0">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-doutorado">Doutorado</span>
+                    <span class="status-label status-em-andamento">Em andamento</span>
+                </div>
+                <h2 class="project-title">Explaining the Unexplainable: Feature Influence Trajectories Across Training Epochs</h2>
+				<p class="project-desc-preview"><strong>Objetivo:</strong>
+			Desenvolvimento de framework XAI para análise longitudinal da evolução temporal da importância das features durante todo o ciclo de treinamento de modelos de Deep Learning, revelando padrões dinâmicos de influência que explicam convergência, overfitting e generalização.</p>
+			<p class="project-desc-extra" id="extra0"><strong>Problema de pesquisa:</strong> Métodos XAI tradicionais (LIME, SHAP,..) fornecem snapshots estáticos da interpretabilidade em checkpoints finais, ignorando a dinâmica evolutiva das contribuições das features ao longo das épocas de treinamento. 
+			Esta tese investiga como a relevância relativa das variáveis de entrada varia temporalmente e impacta o comportamento do modelo.
+			</br></br>
+			<strong>Metodologia Proposta: </strong>	 TimeLIME Framework (Novel Contribution), - Feature Attribution Heatmaps 3D (Época × Feature × Importância), - Longitudinal SHAP Analysis com decomposição temporal, - Dynamic Gradient Flow Tracking entre camadas, - Saliency Trajectory Clustering (k-means temporal), - Convergence Pattern Recognition via LSTM meta-modeling
+			</br></br>
+			<strong>Inovações Técnicas:</strong>
+
+			TimeLIME: Extensão temporal do LIME para análise multi-époça
+
+			Feature Lifecycle Curves: Visualização da "vida útil" de cada feature
+
+			Epoch Saliency Vectors: Representação vetorial da importância por época
+
+			Training Phase Detection: Identificação automática de fases (underfitting → overfitting → convergence)
+			</br></br>
+			<strong>Resultados Esperados:</strong>
+			- Identificação de 3 padrões universais de evolução de features
+			- Correlação 87% entre feature peak importance e final accuracy
+			- Detecção precoce de overfitting em 92% dos casos via feature saturation
+			- Redução de 65% no tempo de diagnóstico de modelos problemáticos
+			</br></br>
+			<strong>Impacto Científico:</strong>
+
+			Primeira abordagem sistemática da interpretabilidade longitudinal em DL
+
+			Novo paradigma: "Features têm ciclos de vida durante o treinamento"
+
+			Aplicações em model monitoring, failure prediction e curriculum learning</p>
+			<button class="expand-btn" onclick="toggleExtra(this, 'extra0')">
+                Ver mais <span class="arrow">&#8964;</span>
+            </button>
+			<div class="tech-tags">
+                    <span class="tag">XAI</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">PyTorch + Captum + SHAP</span>
+                </div>
+            </div>
+        </section>
+		
+		<section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="senview1.png" alt="Mest 1"></div>
+                    <div class="image-slide"><img src="senview2.png" alt="Mest 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(1)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(1)">›</button>
+                </div>
+                <div class="image-count" id="count2">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-tcc">TCC</span>
+					<span class="status-label status-em-andamento">Em andamento</span>
+                </div>
+                <h2 class="project-title"> SenView: Uma Análise Visual Interativa do Desempenho Legislativo Brasileiro</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver um dashboard interativo que integre dados de gastos, assiduidade e atuação temática de senadores, com gráficos temporais, 
+				distribucionais e mapa geoespacial, permitindo analisar padrões de participação, uso de recursos públicos, filiação partidária e interesses legislativos.
+				</p>
+				<p class="project-desc-extra" id="extra1"><strong>Problema de pesquisa:</strong> Os dados públicos sobre senadores estão dispersos, dificultando análises integradas. 
+				Assim, investiga-se como a visualização conjunta de gastos, assiduidade e temas legislativos pode apoiar a compreensão do perfil de atuação parlamentar 
+				e revelar padrões entre participação, despesas e interesses políticos.
+				</br></br>
+				<strong>Metodologia proposta:</strong> A pesquisa será aplicada, exploratória e descritiva, com coleta e integração de dados públicos sobre gastos, assiduidade e produção legislativa. 
+				Os dados serão organizados em formato JSON, e o dashboard será desenvolvido em Streamlit. Para análise textual dos projetos e matérias, será utilizada extração de tópicos, como LDA, para identificar temas recorrentes.
+				</br></br>
+				<strong>Resultados esperados:</strong> Espera-se produzir uma ferramenta que amplie a transparência sobre a atuação dos senadores, permitindo identificar padrões de participação, gastos e temas de interesse. 
+				O trabalho também pretende contribuir academicamente ao demonstrar o uso de visualização de dados e análise textual no contexto legislativo.</p>
+                            <button class="expand-btn" onclick="toggleExtra(this, 'extra1')">
+                Ver mais <span class="arrow">&#8964;</span>
+            </button>
+				<div class="tech-tags">
+                    <span class="tag">Json</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Dashboard</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="dascvis1.png" alt="IC 1"></div>
+                    <div class="image-slide"><img src="dascvis2.jpeg" alt="IC 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(2)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(2)">›</button>
+                </div>
+                <div class="image-count" id="count1">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-mestrado">Mestrado</span>
+                    <span class="status-label status-em-andamento">Em andamento</span>
+                </div>
+                <h2 class="project-title">DASC.Vis: Visualização de Crimes Violentos Letais e Dados Sociais para o Assessoramento das Políticas de Segurança Pública em Salvador</h2>
+                 <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver uma abordagem com painéis visuais interativos capazes de integrar dados de crimes violentos com a geolocalização de instituições públicas das áreas de segurança,
+				saúde e educação, como distritos policiais, postos e unidades de saúde, hospitais, escolas, colégios e universidades. 
+				A proposta busca permitir a visualização de indicadores, tendências, anomalias e padrões geoespaciais relevantes para a compreensão da dinâmica da violência urbana no município de Salvador.</p>
+				<p class="project-desc-extra" id="extra2"> <strong>Problema de pesquisa:</strong>Apesar da crescente disponibilidade de registros digitais e dados georreferenciados, ainda existem limitações na integração entre informações de criminalidade violenta e a distribuição territorial de serviços públicos essenciais. Nesse contexto, questiona-se de que forma a utilização de dashboards interativos pode contribuir para identificar padrões espaciais e temporais da violência, relacionando áreas críticas com a presença ou ausência de instituições públicas estratégicas, de modo a apoiar análises mais qualificadas e subsidiar a tomada de decisão na segurança pública.
+				</br></br>
+				<strong>Metodologia proposta:</strong>  A metodologia proposta baseia-se na coleta, organização, tratamento e integração de dados de crimes violentos e de geolocalização de instituições públicas das áreas de segurança, saúde e educação. Após, a extração de informação para tomada de decisão ocorrerá por meio de visualizações interativas com gráficos temporais, mapas geoespaciais, análises estatísticas e recursos multidimensionais. O estudo terá como recorte principal o município de Salvador. Para avaliação da proposta, serão realizados estudos de caso e testes com usuários especialistas.
+				</br></br>
+				<strong>Resultados esperados:</strong> Espera-se produzir uma ferramenta visual interativa capaz de facilitar a identificação de padrões de concentração criminal, tendências temporais e possíveis relações entre ocorrências violentas e a distribuição de equipamentos públicos essenciais no território. Como resultado, pretende-se ampliar a capacidade de análise de dados na segurança pública, apoiar a identificação de áreas críticas e fornecer subsídios para estratégias baseadas em evidências, contribuindo para o enfrentamento mais eficiente dos desafios associados à violência urbana.
+				</p>
+				<button class="expand-btn" onclick="toggleExtra(this, 'extra2')">
+                Ver mais <span class="arrow">&#8964;</span>
+            </button>
+                <div class="tech-tags">
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Json</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="ICFlowIdea.png" alt="tcc 1"></div>
+                    <div class="image-slide"><img src="ICFlowTela.png" alt="tcc 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(3)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(3)">›</button>
+                </div>
+                <div class="image-count" id="count3">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-tcc">TCC</span>
+                    <span class="status-label status-disponivel">Disponível</span>
+                </div>
+                <h2 class="project-title"> ICFlow - Plataforma de Gestão Física do Instituto de Computação</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolvimento de plataforma web para otimização da gestão 
+				de laboratórios de informática, integrando controle de ativos, sistema de objetos achados/perdidos e mapeamento espacial em tempo real.
+				</p>
+				<p class="project-desc-extra" id="extra3">Funcionalidades Principais:
+                Gestão de Equipamentos: Inventário completo com histórico de manutenção, status de funcionamento e agendamento de uso Objetos Achados/Perdidos: Cadastro georreferenciado, notificações automáticas e sistema de reivindicação
+				Mapeamento 3D/2D: Localização precisa via planta baixa interativa, QR Codes e beacons IoT.
+				</br></br>
+				Tecnologias Propostas:
+				Frontend: React.js + Three.js (mapas 3D)
+				Backend: Node.js + Express + Socket.io (real-time)
+				Banco: PostgreSQL + PostGIS (geolocalização)
+				Mapeamento: Leaflet.js + Floorplan SVG
+				</br></br>
+				Impacto Acadêmico/Tecnológico: Redução no tempo de manutenção da infraestrutura do IC, aumento na taxa de recuperação de objetos perdidos e otimização no uso de recursos laboratoriais.</p>
+                            <button class="expand-btn" onclick="toggleExtra(this, 'extra3')">
+                Ver mais <span class="arrow">&#8964;</span>
+            </button>
+				<div class="tech-tags">
+                    <span class="tag"> Node.js</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Floorplan SVG</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src="ConectaIC1.png" alt="Dout 1"></div>
+                    <div class="image-slide"><img src="ConectaIC2.png" alt="Dout 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(4)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(4)">›</button>
+                </div>
+                <div class="image-count" id="count3">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-extensao">Extensão</span>
+                    <span class="status-label status-disponivel">Disponível</span>
+                </div>
+                <h2 class="project-title">ConectaIC</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong>  Aproximar a comunidade externa da universidade, especialmente familiares e amigos de estudantes, das atividades de ensino superior. A proposta busca promover vivência direta no ambiente acadêmico por meio da participação de convidados em aulas, ampliando a compreensão sobre o papel social da universidade pública e sua contribuição nas áreas de ensino, pesquisa e extensão.</p>
+                <p class="project-desc-extra" id="extra4"><strong>Justificativa:</strong>  A universidade pública enfrenta descredibilidade social, alimentada por desinformação, fake news e narrativas distorcidas sobre seu funcionamento. Ao mesmo tempo, nem sempre comunica de forma acessível a relevância de suas ações. O projeto surge para reduzir essa distância, aproximando a população do cotidiano acadêmico e evidenciando a importância social, científica e formativa da instituição.
+				</br></br>
+				<strong>Metodologia proposta:</strong> 
+				Serão selecionadas disciplinas e docentes participantes, seguidos da indicação de convidados por estudantes. No dia da visita, haverá acolhimento inicial, apresentação do projeto, da infraestrutura e dos profissionais da unidade. Em seguida, o convidado acompanhará uma aula. Ao final, responderá a um formulário de avaliação, e os dados coletados serão organizados em um painel visual para divulgação dos resultados.
+				</br></br>
+				<strong>Resultados esperados:</strong>
+				Espera-se ampliar o conhecimento da comunidade externa sobre a importância da universidade pública, fortalecendo sua imagem institucional. Pretende-se que os visitantes compreendam melhor o impacto do ensino, da pesquisa e da extensão, sintam-se acolhidos no ambiente universitário e desenvolvam maior confiança na capacidade técnica e no compromisso social dos profissionais que atuam na instituição.
+				</br></br>
+				</p>
+				          <button class="expand-btn" onclick="toggleExtra(this, 'extra4')">
+                Ver mais <span class="arrow">&#8964;</span>
+				<div class="tech-tags">
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Plotly</span>
+                </div>
+            </div>
+        </section>
+
+       <section class="project-row">
+            <div class="carousel-container">
+                <div class="project-images">
+                    <div class="image-slide active"><img src=".png" alt="Dout 1"></div>
+                    <div class="image-slide"><img src="https://via.placeholder.com/480x320/6B7280/fff?text=Dout+2" alt="Dout 2"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="prevImage(5)">‹</button>
+                    <button class="nav-btn" onclick="nextImage(5)">›</button>
+                </div>
+                <div class="image-count" id="count3">1/2</div>
+            </div>
+            <div class="project-info">
+                <div class="labels-container">
+                    <span class="category-label category-extensao">Extensão</span>
+                    <span class="status-label status-disponivel">Disponível</span>
+                </div>
+                <h2 class="project-title">ConectaIC</h2>
+                <p class="project-desc-preview"><strong>Objetivo:</strong> </p>
+                <p class="project-desc-extra" id="extra5"><strong>Justificativa:</strong> 
+				</br></br>
+				<strong>Metodologia proposta:</strong> 
+				
+				</br></br>
+				<strong>Resultados esperados:</strong>
+				
+				</br></br>
+				</p>
+				          <button class="expand-btn" onclick="toggleExtra(this, 'extra5')">
+                Ver mais <span class="arrow">&#8964;</span>
+				<div class="tech-tags">
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Plotly</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentImages = [0, 0, 0, 0, 0];
+
+        function nextImage(projectIndex) {
+            const slides = document.querySelectorAll(`.project-row:nth-child(${projectIndex + 1}) .image-slide`);
+            const total = slides.length;
+            currentImages[projectIndex] = (currentImages[projectIndex] + 1) % total;
+            updateCarousel(projectIndex, slides);
+        }
+
+        function prevImage(projectIndex) {
+            const slides = document.querySelectorAll(`.project-row:nth-child(${projectIndex + 1}) .image-slide`);
+            const total = slides.length;
+            currentImages[projectIndex] = (currentImages[projectIndex] - 1 + total) % total;
+            updateCarousel(projectIndex, slides);
+        }
+
+        function updateCarousel(projectIndex, slides) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentImages[projectIndex]);
+            });
+            document.getElementById(`count${projectIndex}`).textContent = 
+                `${currentImages[projectIndex] + 1}/${slides.length}`;
+        }
+	/* ── Expandir/Recolher ── */
+    function toggleExtra(btn, projectIndex) {
+        const extra = document.getElementById(projectIndex);
+        const isOpen = extra.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.querySelector('.arrow').textContent = isOpen ? '⌃' : '⌄';
+        btn.childNodes[0].textContent = isOpen ? 'Ver menos ' : 'Ver mais ';
+    }
+    </script>
+</body>
+</html>
+```
