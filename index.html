@@ -264,6 +264,28 @@
         }
         .expand-btn.open .arrow { transform: rotate(180deg); }
 		
+		/* ── LINK DE ÂNCORA ── */
+        .anchor-link {
+            display: inline-block;
+            margin-left: 12px;
+            padding: 4px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        .anchor-link:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        .anchor-link.copied {
+            animation: copyFeedback 0.5s ease;
+        }
+        @keyframes copyFeedback {
+            0% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+		
 		 /* ── TAGS ── */
          .tech-tags {
             display: flex;
@@ -312,7 +334,7 @@
     <span style="font-weight: 300; font-size: 0.4em; letter-spacing: 12px; opacity: 0.85; text-shadow: none;">Prof. Danilo Coimbra - UFBA</span>
 </h1>
     <div class="projects-list">
-        <section class="project-row">
+        <section class="project-row" id="xai-timelime">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="XAIIdeia.png" alt="Calc 1"></div>
@@ -329,7 +351,9 @@
                     <span class="category-label category-doutorado">Doutorado</span>
                     <span class="status-label status-em-andamento">Em andamento</span>
                 </div>
-                <h2 class="project-title">Explaining the Unexplainable: Feature Influence Trajectories Across Training Epochs</h2>
+                <h2 class="project-title">Explaining the Unexplainable: Feature Influence Trajectories Across Training Epochs
+                <span class="anchor-link" onclick="copyAnchorLink('xai-timelime')" title="Copiar link">🔗</span>
+                </h2>
 				<p class="project-desc-preview"><strong>Objetivo:</strong>
 			Desenvolver um framework XAI para análise longitudinal da evolução temporal da importância das features durante todo o ciclo de treinamento de modelos de Deep Learning, revelando padrões dinâmicos de influência que explicam convergência, overfitting e generalização.</p>
 			<p class="project-desc-extra" id="extra0"><strong>Problema de pesquisa:</strong> Métodos XAI tradicionais (LIME, SHAP,..) fornecem snapshots estáticos da interpretabilidade em checkpoints finais, ignorando a dinâmica evolutiva das contribuições das features ao longo das épocas de treinamento. 
@@ -371,7 +395,7 @@
             </div>
         </section>
 		
-          <section class="project-row">
+          <section class="project-row" id="senview">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="senview1.png" alt="Mest 1"></div>
@@ -388,7 +412,9 @@
                     <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-em-andamento">Em andamento</span>
                 </div>
-                <h2 class="project-title"> SenView: Uma Análise Visual Interativa do Desempenho Legislativo Brasileiro</h2>
+                <h2 class="project-title"> SenView: Uma Análise Visual Interativa do Desempenho Legislativo Brasileiro
+                <span class="anchor-link" onclick="copyAnchorLink('senview')" title="Copiar link">🔗</span>
+                </h2>
                 <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver um dashboard interativo que integre dados de gastos, assiduidade e atuação temática de senadores, com gráficos temporais, 
                                 distribucionais e mapa geoespacial, permitindo analisar padrões de participação, uso de recursos públicos, filiação partidária e interesses legislativos.
                                 </p>
@@ -412,7 +438,7 @@
             </div>
         </section>
 
-          <section class="project-row">
+          <section class="project-row" id="icflow">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="ICFlowIdea.png" alt="tcc 1"></div>
@@ -429,7 +455,9 @@
                     <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-disponivel">Disponível</span>
                 </div>
-                <h2 class="project-title"> ICFlow - Plataforma de Gestão Física do Instituto de Computação</h2>
+                <h2 class="project-title"> ICFlow - Plataforma de Gestão Física do Instituto de Computação
+                <span class="anchor-link" onclick="copyAnchorLink('icflow')" title="Copiar link">🔗</span>
+                </h2>
                 <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver uma plataforma web para otimização da gestão 
                                 de laboratórios de informática, integrando controle de ativos, sistema de objetos achados/perdidos e mapeamento espacial em tempo real.
                                 </p>
@@ -455,7 +483,7 @@
             </div>
         </section>
 
-        <section class="project-row">
+        <section class="project-row" id="gps-academico">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="MatriculaVis2.png" ></div>
@@ -472,7 +500,9 @@
                     <span class="category-label category-it">Iniciação Tecnológica</span>
                     <span class="status-label status-em-andamento">Em andamento</span>
                 </div>
-                <h2 class="project-title">GPS Acadêmico: Mapa Visual e Interativo para Planejamento Acadêmico do Estudante</h2>
+                <h2 class="project-title">GPS Acadêmico: Mapa Visual e Interativo para Planejamento Acadêmico do Estudante
+                <span class="anchor-link" onclick="copyAnchorLink('gps-academico')" title="Copiar link">🔗</span>
+                </h2>
                 <p class="project-desc-preview"><strong>Objetivo:</strong>
                     desenvolver uma ferramenta visual e interativa baseada em grafos para auxiliar estudantes no planejamento acadêmico e na organização da matrícula, considerando pré-requisitos, fluxo curricular, departamentos, cursos, turnos, horários e campus. Essa ferramenta deve permitir ao usuário ter acesso e filtrar informações de seu curso (disciplinas obrigatórias, optativas e livres), assim como cursos correlatos. É desejável que a ferramenta notifique possíveis incompatibilidade de horários, pré-requisitos, ou mudança de campus.
                 <p class="project-desc-extra" id="extra3"><strong>Problema de pesquisa:</strong> A ausência de uma visualização integrada com as inúmeras variáveis de matriz curricular e de geolocalização reduz a eficiência do planejamento acadêmico e aumenta a insegurança do estudante diante das decisões de realização de matrícula em todos os períodos acadêmicos.
@@ -494,7 +524,7 @@
             </div>
         </section>
 
-        <section class="project-row">
+        <section class="project-row" id="dasc-vis">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="dascvis1.png" alt="IC 1"></div>
@@ -511,7 +541,9 @@
                     <span class="category-label category-mestrado">Mestrado</span>
                     <span class="status-label status-em-andamento">Em andamento</span>
                 </div>
-                <h2 class="project-title">DASC.Vis: Visualização de Crimes Violentos Letais e Dados Sociais para o Assessoramento das Políticas de Segurança Pública em Salvador</h2>
+                <h2 class="project-title">DASC.Vis: Visualização de Crimes Violentos Letais e Dados Sociais para o Assessoramento das Políticas de Segurança Pública em Salvador
+                <span class="anchor-link" onclick="copyAnchorLink('dasc-vis')" title="Copiar link">🔗</span>
+                </h2>
                  <p class="project-desc-preview"><strong>Objetivo:</strong> Desenvolver uma abordagem com painéis visuais interativos capazes de integrar dados de crimes violentos com a geolocalização de instituições públicas das áreas de segurança,
                                 saúde e educação, como distritos policiais, postos e unidades de saúde, hospitais, escolas, colégios e universidades. 
                                 A proposta busca permitir a visualização de indicadores, tendências, anomalias e padrões geoespaciais relevantes para a compreensão da dinâmica da violência urbana no município de Salvador.</p>
@@ -532,7 +564,7 @@
             </div>
         </section>
 
-        <section class="project-row">
+        <section class="project-row" id="conecta-ic">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="ConectaIC1.png" alt="Dout 1"></div>
@@ -549,7 +581,9 @@
                     <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-disponivel">Disponível</span>
                 </div>
-                <h2 class="project-title">ConectaIC</h2>
+                <h2 class="project-title">ConectaIC
+                <span class="anchor-link" onclick="copyAnchorLink('conecta-ic')" title="Copiar link">🔗</span>
+                </h2>
                 <p class="project-desc-preview"><strong>Objetivo:</strong>  Aproximar a comunidade externa da universidade, especialmente familiares e amigos de estudantes, das atividades de ensino superior. A proposta busca promover vivência direta no ambiente acadêmico por meio da participação de convidados em aulas, ampliando a compreensão sobre o papel social da universidade pública e sua contribuição nas áreas de ensino, pesquisa e extensão.</p>
                 <p class="project-desc-extra" id="extra5"><strong>Justificativa:</strong>  A universidade pública enfrenta descredibilidade social, alimentada por desinformação, fake news e narrativas distorcidas sobre seu funcionamento. Ao mesmo tempo, nem sempre comunica de forma acessível a relevância de suas ações. O projeto surge para reduzir essa distância, aproximando a população do cotidiano acadêmico e evidenciando a importância social, científica e formativa da instituição.
                                 </br></br>
@@ -571,7 +605,7 @@
             </div>
         </section>
 
-       <section class="project-row">
+       <section class="project-row" id="llm-graficos">
             <div class="carousel-container">
                 <div class="project-images">
                     <div class="image-slide active"><img src="LLMsGraphs2.png" alt="TCC3"></div>
@@ -588,7 +622,9 @@
                     <span class="category-label category-tcc">TCC</span>
                     <span class="status-label status-disponivel">Disponível</span>
                 </div>
-                <h2 class="project-title">Do Prompt ao Gráfico: Qual LLM Entende Melhor Visualização de Dados?</h2>
+                <h2 class="project-title">Do Prompt ao Gráfico: Qual LLM Entende Melhor Visualização de Dados?
+                <span class="anchor-link" onclick="copyAnchorLink('llm-graficos')" title="Copiar link">🔗</span>
+                </h2>
                 <p class="project-desc-preview"><strong>Objetivo:</strong>
                 Investigar como diferentes modelos de linguagem de grande porte, como ChatGPT, Gemini e DeepSeek, atuam na construção do pipeline de visualização de dados a partir de prompts em linguagem natural. <!--O trabalho busca analisar a capacidade desses modelos de definir dados relevantes, sugerir pré-processamentos, propor mapeamentos visuais, selecionar gráficos e interações adequadas para a construção de metáforas visuais coerentes com os objetivos analíticos.--></p>
                 <p class="project-desc-extra" id="extra6"><strong>Problema de pesquisa:</strong> Embora LLMs tenham demonstrado potencial em tarefas de apoio à análise de dados, ainda não está claro como esses modelos se comportam ao longo das diferentes etapas do pipeline de visualização. <!--Nesse contexto, questiona-se em que medida diferentes LLMs conseguem interpretar prompts para gerar decisões adequadas sobre seleção e transformação de dados, definição de representações visuais, bem como em quais etapas apresentam maior ou menor eficácia.-->
@@ -647,6 +683,21 @@
         btn.classList.toggle('open', isOpen);
         btn.querySelector('.arrow').textContent = isOpen ? '⌃' : '⌄';
         btn.childNodes[0].textContent = isOpen ? 'Ver menos ' : 'Ver mais ';
+    }
+
+    /* ── Copiar link de âncora ── */
+    function copyAnchorLink(anchorId) {
+        const url = window.location.href.split('#')[0] + '#' + anchorId;
+        navigator.clipboard.writeText(url).then(() => {
+            const linkIcon = event.target;
+            linkIcon.classList.add('copied');
+            setTimeout(() => {
+                linkIcon.classList.remove('copied');
+            }, 500);
+        }).catch(err => {
+            console.error('Erro ao copiar:', err);
+            alert('Link: ' + url);
+        });
     }
     </script>
 </body>
